@@ -2,7 +2,7 @@
 #Copyright (c) Yigit DEMIRAG, http://yigitdemirag.com
 
 #You have to change RaspiMac with your own RasPi's MAC adress.
-RaspiMac="7c:dd:90"
+RaspiMac="7c:dd:70"
 
 echo 'Searching for Raspberry Pi...'
 for i in 1 2 3 4 5
