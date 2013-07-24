@@ -1,8 +1,10 @@
 #!/bin/bash
+#Copyright (c) Yigit DEMIRAG, http://yigitdemirag.com
 
+#You have to change RaspiMac with your own RasPi's MAC adress.
 RaspiMac="7c:dd:90"
 
-echo Searching for Raspberry Pi...
+echo 'Searching for Raspberry Pi...'
 for i in 1 2 3 4 5
 do
     IPFound=$(arp -a | grep $RaspiMac | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}')
@@ -20,9 +22,9 @@ do
     fi
 done
 if [[ -z "$IPFound" ]]; then
-   echo Raspberry not found.
+   echo 'Raspberry not found.'
 else
-   echo Connecting Raspberry over SSH...
+   echo 'Connecting Raspberry over SSH...'
    ssh pi@$IPFound
 fi
 
